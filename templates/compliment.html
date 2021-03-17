@@ -1,9 +1,16 @@
 <!doctype html>
 <html>
 <head>
-  <title>A Compliment</title>
+  <title>Game Invitation</title>
 </head>
 <body>
-    Hi {{ person }}! I think you're {{ compliment }}!
+    Hi {{ person }}! Would you like to play a game?
+    <form action ="/game">
+      <input type="radio" id="game" name="game" value="yes">
+      <label for="yes">Yes!</label><br>
+      <input type="radio" id="game" name="game" value="no">
+      <label for="no">No...</label><br>
+      <input type="submit">
+    </form>
 </body>
 </html>
