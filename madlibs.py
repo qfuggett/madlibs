@@ -57,13 +57,16 @@ def show_madlib_form():
 def show_madlib():
     """Shows madlib text"""
 
+    player = request.args.get("person")
     name = request.args.get("name")
     color = request.args.get("color")
     noun = request.args.get("noun")
-    adjective = request.args.get("adjective")
+    genre = request.args.get("genre")
+    adjectives = request.args.getlist("adj")
 
 
-    return render_template("madlib.html", name=name, color=color, noun=noun, adjective=adjective)
+    return render_template("madlib.html", name=name, color=color, noun=noun, person=player,
+        adjectives=adjectives, genre=genre)
 
 
 if __name__ == '__main__':

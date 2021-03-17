@@ -7,8 +7,21 @@
         <form action="/madlib">
             Give me a name! <input type="text" name="name">
             Now for a color! <input type="text" name="color">
-            Next is a noun... <input type="text" name="noun">
-            Last is an adjective! <input type="text" name="adjective">
+            Next is a noun... <input type="text" name="noun"><br/>
+            Last is an adjective: <br/>
+            beautiful <input type="checkbox" name="adj" value="beautiful">  
+            boring <input type="checkbox" name="adj" value="boring">
+            blessed <input type="checkbox" name="adj" value="blessed">
+            <br/>
+            What type of story is this?<br/>
+            <input type="radio" name="genre" value="scary">
+            <label for="scary">Scary  :O</label>
+            <input type="radio" name="genre" value="happy">
+            <label for="happy">Happy!</label>
+            <input type="radio" name="genre" value="sad">
+            <label for="sad">Sad  :( </label>
+            <input type="hidden" name="person" value= {{ person }}>
+
             <input type="submit">
         </form>
 

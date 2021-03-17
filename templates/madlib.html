@@ -4,8 +4,15 @@
         <title>Madlibs text...</title>
     </head>
     <body>
+        You chose a {{ genre }}-styled story!!
         There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
         When {{ person }} went to pick it up, it burst into flames in a totally
-        {{ adjective }} way.
+        {% if adjectives %}
+            {% for adjective in adjectives %}
+                {{ adjective }} way.
+            {% endfor %}
+        {% endif %}
+        <input type="hidden" name="person" value= {{ person }}>
+
     </body>
 </html>
